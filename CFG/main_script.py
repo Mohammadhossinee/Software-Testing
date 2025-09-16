@@ -30,30 +30,11 @@ def main():
 
     output_basename = "cfg_output"
     code_to_process = """
-# Control flow demonstration with for, while, and match-case (Python 3.10+)
+x = 0
+while x < y:
+    y = f(x, y)
+    x = x + 1
 
-# For loop example
-for i in range(5):
-    print("For loop iteration:", i)
-
-# While loop example
-count = 0
-while count < 5:
-    print("While loop count:", count)
-    count += 1
-
-# Switch case simulation using match-case
-switch_case = 2
-
-match switch_case:
-    case 1:
-        print("Switch case: Case 1 executed")
-    case 2:
-        print("Switch case: Case 2 executed")
-    case 3:
-        print("Switch case: Case 3 executed")
-    case _:
-        print("Switch case: Default case executed")
 """
     if len(sys.argv) > 1:
         first_arg = sys.argv[1]
